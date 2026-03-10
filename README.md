@@ -1,18 +1,17 @@
-# Dynamic content-addressable memory based on global centroid features for online task-free continual learning
+# Geometry-Controlled Convex Hull Prototype Framework for Online Task-Free Continual Learning
 ## Dataset
 - Split CIFAR-10
 - Split CIFAR-100
 - Split CUB-200
 - CORe-50
 ## Feature extractor
-- Reduced Resnet-18
 - Resnet-18
 - Resnet-50
-## Sample commands to run GCF
-##### Dataset: Split CIFAR-10, Feature extractor: Reduced Resnet-18, Memory size: 1000
+## Sample commands to run GCHP
+##### Dataset: Split CIFAR-10, Feature extractor: Resnet-18, Prototype capacity: 1000
 <pre>
   <code id="code-snippet">
-    python General_main.py --dataset cifar10 --backbone reduced --memory 1000
+    python General_main.py --dataset cifar10 --backbone resnet18 --capacity 1000
   </code>
 </pre>
 ##### Dataset: CORe-50, Feature extractor: Resnet-18, Memory size: 2000
