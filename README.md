@@ -11,7 +11,7 @@
 ##### Dataset: Split CIFAR-10, Feature extractor: Resnet-18, Prototype capacity: 1000
 <pre>
   <code id="code-snippet">
-    python General_main.py --dataset cifar10 --backbone resnet18 --capacity 1000
+    python General_main.py --dataset cifar10 --backbone resnet18 --capacity 1000
   </code>
 </pre>
 ##### Dataset: CORe-50, Feature extractor: Resnet-18, Memory size: 2000
