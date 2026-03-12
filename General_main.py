@@ -17,10 +17,10 @@ def main(args):
 
 
 
-    avg, last, meansize = experiment.run(dataset, args.prototype)
-    print(avg)
-    print(last)
-    print(meansize)
+    avg, last, n_vertices = experiment.run(dataset, args.prototype)
+    print('Avg: ',avg)
+    print('Last: ',last)
+    print('Number of vertices: ',n_vertices)
 
 if __name__ == "__main__":
 
