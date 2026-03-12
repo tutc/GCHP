@@ -7,15 +7,9 @@ def main(args):
     print(args)
 
     if args.dataset == 'cifar10':
-        if args.backbone == 'reduced':
-            dataset = benchmarks.Cifar10ReducedResnet18.CIFAR10REDUCEDRESNET18()
-        else:
-            dataset = benchmarks.Cifar10Resnet18.CIFAR10RESNET18()
+        dataset = benchmarks.Cifar10Resnet18.CIFAR10RESNET18()
     elif args.dataset == 'core50':
-        if args.backbone == 'reduced':
-            dataset = benchmarks.Core50ReducedResnet18.CORE50REDUCEDRESNET18()
-        else:
-            dataset = benchmarks.Core50Resnet18.CORE50RESNET18()
+        dataset = benchmarks.Core50Resnet18.CORE50RESNET18()
     elif args.dataset == 'cifar100':
         dataset = benchmarks.Cifar100Resnet50.CIFAR100RESNET50(start = args.step, step = args.step)
     else:
@@ -23,7 +17,7 @@ def main(args):
 
 
 
-    avg, last, meansize = experiment.run(dataset, args.memory_size)
+    avg, last, meansize = experiment.run(dataset, args.prototype)
     print(avg)
     print(last)
     print(meansize)
@@ -35,9 +29,9 @@ if __name__ == "__main__":
     
     #parser.add_argument('--num_runs', dest='num_runs', default=1, type=int, help='Number of runs (default: %(default)s)')
     parser.add_argument('--dataset',  dest='dataset', default='cifar100', type=str, help='Dataset')
-    parser.add_argument('--backbone',  dest='backbone', default='resnet50', type=str, help='Features Extractor')
     parser.add_argument('--step',  dest='step', default=2, type=int, help='Step size')
-    parser.add_argument('--memory',  dest='memory_size', default=3000, type=int, help='Memory size')
+    parser.add_argument('--backbone',  dest='backbone', default='resnet50', type=str, help='Features Extractor')
+    parser.add_argument('--prototype',  dest='prototype', default=3000, type=int, help='Prototype capacity')
 
     args = parser.parse_args()
     main(args)
