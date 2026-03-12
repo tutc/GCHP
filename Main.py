@@ -10,7 +10,7 @@ import torch.nn.functional as F
 import tqdm
 
 import numpy as np
-
+from tqdm import tqdm
 import random
 
 import Benchmarks as benchmarks
@@ -260,9 +260,8 @@ def run(data, capacity = 3000, heso = 0.9):
     
     n_mini_batch = 55
 
-    exp = Main(n_mini_batch, n_class = data.n_class, n_features = data.n_features) 
-    exp.T = beta 
-    exp.capacity = capacity
+    exp = Main(n_mini_batch, n_class = data.n_class, n_features = data.n_features)  
+    exp.capacity = capacity
     exp.heso = heso
     random_ordering = True 
     exp.threshold = (int)(capacity /data.n_class )
