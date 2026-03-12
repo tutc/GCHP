@@ -236,11 +236,9 @@ class Main(nn.Module):
         for idx_try in tqdm(range(N_try)):
             self.reset()
             _, acc_last = self.train_test(train_features, test_features)
-            # print('KQ last_acc cua la try thu ',idx_try, ' la: ',acc_last)
 
             if self.avg_acc_activ:
                 avg_acc[idx_try] = torch.tensor(self.avg_acc)
-                # print('KQ avg_acc cua la try thu ',idx_try, ' la: ',self.avg_acc)
             self.forgetting.append((self.acc_after_each_task*100-self.acc_after_all_task).mean())
             acc_test_softmin[idx_try] = acc_last
             
@@ -249,14 +247,9 @@ class Main(nn.Module):
                 dataset_shuffle = list(zip(train_features, test_features))
                 random.shuffle(dataset_shuffle)
                 train_features, test_features = zip(*dataset_shuffle)
-        
-        # print('KQ Last truoc khi goi mean o trong ham run experiment: ', acc_test_softmin)    
+  
         last_acc = acc_test_softmin.mean(1)
 
-        #print("forgetting softmin inference = {:.1f} % ± {:.1f}".format(np.mean(self.forgetting),np.std(self.forgetting)))
-        # print('KQ truoc khi ket thuc ham run experiment')
-        # print('Last: ', last_acc)
-        # print('Avg: ', avg_acc)
         return avg_acc, last_acc 
 
 
