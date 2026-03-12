@@ -17,7 +17,7 @@ def main(args):
 
 
 
-    avg, last, n_vertices, elapsed_time = experiment.run(dataset, args.prototype)
+    avg, last, n_vertices, elapsed_time = experiment.run(dataset, args.capacity)
     print('Avg: ',avg)
     print('Last: ',last)
     print('Number of vertices: ',n_vertices)
