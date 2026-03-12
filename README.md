@@ -37,3 +37,14 @@ These results underline the effectiveness of geometric consolidation for continu
     python General_main.py --dataset cub200 --step 5 --backbone resnet50 --capacity 5000
   </code>
 </pre>
+## Citation
+If you use this code in your research, please cite the following relevant work:
+<pre>
+  <code id="code-snippet">
+    @article{tutc_GCHP,
+      author       = {Cong Tu Tran, Thanh Tuan Nguyen, Thanh Phuong Nguyen, and Nadège Thirion-Moreau},
+      title        = {Geometry-Controlled Convex Hull Prototype Framework for Online Task-Free Continual Learning},
+      journal      = {Neurocomputing},
+      note         = {Submitted 2026}
+    }  </code>
+</pre>
