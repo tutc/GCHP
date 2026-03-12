@@ -260,7 +260,7 @@ class Main(nn.Module):
         return avg_acc, last_acc 
 
 
-def run(data, memorysize = 3000, heso = 0.9):
+def run(data, capacity = 3000, heso = 0.9):
 
     set_seed()
     
@@ -269,10 +269,10 @@ def run(data, memorysize = 3000, heso = 0.9):
 
     exp = Main(n_mini_batch, n_class = data.n_class, n_features = data.n_features) 
     exp.T = beta 
-    exp.memorySize = memorysize
+    exp.capacity = capacity
     exp.heso = heso
     random_ordering = True 
-    exp.threshold = (int)(memorysize /data.n_class )
+    exp.threshold = (int)(capacity /data.n_class )
     batch_size = min(exp.threshold, 32)
     N_try = 5
     exp.avg_acc_activ = True
@@ -295,10 +295,9 @@ if __name__ == '__main__':
     #dataset = benchmarks.Cifar100Resnet50.CIFAR100RESNET50(start = 5, step = 5)
     #dataset = benchmarks.Cub200Resnet50.CUB200RESNET50(start = 2, step = 2)
     #dataset = benchmarks.Cub200Resnet50.CUB200RESNET50(start = 5, step = 5)
-    memorySize = 3000
+    capacity = 3000
     alpha = 0.9
-	#avg_GCF, last_GCF, meansize_GCF, elapsed_time = run(dataset, beta=1, memorysize = memorySize, dim=dim, heso = alpha, reduce = '2D')
-    avg_GCF, last_GCF, meansize_GCF, elapsed_time = run(dataset, memorysize = memorySize, heso = alpha)
+    avg_GCF, last_GCF, meansize_GCF, elapsed_time = run(dataset, capacity = capacity, heso = alpha)
     print(avg_GCF)
     print(last_GCF)
     print(meansize_GCF)
