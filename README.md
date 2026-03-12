@@ -14,21 +14,21 @@
     python General_main.py --dataset cifar10 --backbone resnet18 --capacity 1000
   </code>
 </pre>
-##### Dataset: CORe-50, Feature extractor: Resnet-18, Memory size: 2000
+##### Dataset: CORe-50, Feature extractor: Resnet-18, Prototype capacity: 2000
 <pre>
   <code id="code-snippet">
-    python General_main.py --dataset core50 --backbone resnet18 --memory 2000
+    python General_main.py --dataset core50 --backbone resnet18 --capacity 2000
   </code>
 </pre>
-##### Dataset: Split CIFAR-100, Feature extractor: Resnet-50, Step: 2
+##### Dataset: Split CIFAR-100, Step: 2, Feature extractor: Resnet-50, Prototype capacity: 3000 
 <pre>
   <code id="code-snippet">
-    python General_main.py --dataset cifar100 --backbone resnet50 --step 2
+    python General_main.py --dataset cifar100 --step 2 --backbone resnet50
   </code>
 </pre>
-##### Dataset: Split CUB-200, Feature extractor: Resnet-50, Step: 5
+##### Dataset: Split CUB-200, Step: 5, Feature extractor: Resnet-50, Prototype capacity: 5000 
 <pre>
   <code id="code-snippet">
-    python General_main.py --dataset cub200 --backbone resnet50 --step 5
+    python General_main.py --dataset cub200 --step 5 --backbone resnet50 --capacity 5000
   </code>
 </pre>
