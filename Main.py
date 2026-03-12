@@ -130,7 +130,7 @@ class Main(nn.Module):
             else:
                 self.class_to_hull[class_id].expand(point)
                 while len(self.class_to_hull[class_id].origin_hull.vertices) > self.threshold:
-                    self.class_to_hull[class_id].shrink_original()
+                    self.class_to_hull[class_id].shrink()
   
     def updateMemoryBank(self):
         all_features = []
