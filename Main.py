@@ -1,7 +1,7 @@
 """
-
-    
+    Code adapted from https://github.com/Julien-pour/Dynamic-Sparse-Distributed-Memory   
 """
+
 import time
 import torch
 
