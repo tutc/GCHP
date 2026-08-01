@@ -41,10 +41,15 @@ These results underline the effectiveness of geometric consolidation for continu
 If you use this code in your research, please cite the following relevant work:
 <pre>
   <code id="code-snippet">
-    @article{tutc_GCHP,
-      author       = {Cong Tu Tran, Thanh Tuan Nguyen, Thanh Phuong Nguyen, and Nadège Thirion-Moreau},
-      title        = {Geometry-Controlled Convex Hull Prototype Framework for Online Task-Free Continual Learning},
-      journal      = {Neurocomputing},
-      note         = {Submitted 2026}
+    @article{TRAN2026134619,
+      title = {Geometry-controlled convex hull prototype framework for online task-free continual learning},
+      journal = {Neurocomputing},
+      volume = {701},
+      pages = {134619},
+      year = {2026},
+      issn = {0925-2312},
+      doi = {https://doi.org/10.1016/j.neucom.2026.134619},
+      url = {https://www.sciencedirect.com/science/article/pii/S0925231226020175},
+      author = {Cong Tu Tran and Thanh Tuan Nguyen and Thanh Phuong Nguyen and Nadège Thirion-Moreau}
     }  </code>
 </pre>
